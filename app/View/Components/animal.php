@@ -8,17 +8,12 @@ use Illuminate\View\Component;
 
 class animal extends Component
 {
-    /**
-     * Create a new component instance.
-     */
+    public $animal;
     public function __construct()
     {
-        //
+        $this->animal= $animal;
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     */
     public function render(): View|Closure|string
     {
         return view('components.animal');

@@ -28,13 +28,7 @@ class AnimalController extends Controller
     }
     public function update($id){
         $animal=Animal::findOrFail($id);
-        $animal->update([
-            'name'=>$animal->name." Modified",
-            'breed'=>$animal->breed,
-            'age'=>$animal->age,
-            'description'=>$animal->description,
-            'img'=>$animal->img,
-        ]);
+        $animal->update([ 'name'=>$animal->name." Modified" ]);
         return redirect('/');
     }
     public function delete($id){

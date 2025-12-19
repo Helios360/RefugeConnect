@@ -4,7 +4,7 @@
 <div>
     <h2>Nos Animaux</h2>
     <div class="animal-card">
-        @foreach($animal as $animal)
+        @foreach($animals as $animal)
             <x-animal :animal="$animal"/>
         @endforeach
     </div>
