@@ -5,7 +5,7 @@
     <h2>{{ $animal->name }}</h2>
     <p>Espèce: {{ $animal->breed }}</p>
     <p>Age: {{ $animal->age }}</p>
-    <p id="desc">{{ $animal->description}}</p>
+    <p id="desc">{{ Str::limit($animal->description, 67) }}</p>
     <!--<h6>Modified: {{ $animal->updated_at}}</h6>-->
     <span>
         <a href="{{ route('animal.delete', $animal->id) }}">Delete</a>
