@@ -5,9 +5,7 @@
     <h2>Nos Animaux</h2>
     <div class="animal-card">
         @foreach($animal as $animal)
-            @if($loop->index < 3 ) 
-                <x-animal :animal="$animal"/>
-            @endif
+            <x-animal :animal="$animal"/>
         @endforeach
     </div>
 </div>

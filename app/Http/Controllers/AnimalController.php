@@ -15,33 +15,6 @@ class AnimalController extends Controller
     public function create(){
         Animal::insert([
             [
-                "name"=>"Bella",
-                "breed"=>"Chien",
-                "age"=>5,
-                "description"=>"Une labrador joueuse et affectueuse qui adore la compagnie.",
-                "img"=>"bella.png",
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                "name"=>"Luna",
-                "breed"=>"Chat",
-                "age"=>3,
-                "description"=>"Une chatte calme et câline qui aime les endroits tranquilles.",
-                "img"=>"luna.png",
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                "name"=>"Max",
-                "breed"=>"Chien",
-                "age"=>2,
-                "description"=>"Un jeune chiot plein d’énergie qui adore courir et jouer dehors.",
-                "img"=>"max.png",
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
                 "name"=>"Coquillette",
                 "breed"=>"Chien",
                 "age"=>3,
@@ -56,7 +29,7 @@ class AnimalController extends Controller
     public function update($id){
         $animal=Animal::findOrFail($id);
         $animal->update([
-            'name'=>$animal->name,
+            'name'=>$animal->name." Modified",
             'breed'=>$animal->breed,
             'age'=>$animal->age,
             'description'=>$animal->description,

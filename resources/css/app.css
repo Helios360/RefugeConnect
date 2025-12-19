@@ -17,7 +17,7 @@ body{
     flex-direction: column;
 }
 *{transition: all 0.5s ease-out; box-sizing: content-box;}
-a{ color: none; text-decoration: none; }
+a{ color: var(--secondary); text-decoration: none; }
 a:active{ color: var(--secondary); }
 a:visited{ color: var(--secondary); }
 a:hover{ color: var(--tertiary); text-decoration: underline;}
@@ -52,6 +52,7 @@ footer{
 }
 .animal-card{
     display:flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap:2rem;
 }
@@ -70,6 +71,12 @@ footer{
 }
 .animal-card > div img:hover{
     opacity: 0.5;
+}
+.animal-card > div span{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 .details{
     display: flex;
