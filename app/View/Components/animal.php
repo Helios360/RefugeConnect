@@ -9,7 +9,7 @@ use Illuminate\View\Component;
 class animal extends Component
 {
     public $animal;
-    public function __construct()
+    public function __construct($animal)
     {
         $this->animal= $animal;
     }
